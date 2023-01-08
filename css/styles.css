@@ -22,7 +22,6 @@ body {
         margin: 0;
     }
     
-
     .container {
         width: 1158px;
         padding-left: 15px;
@@ -30,6 +29,15 @@ body {
         margin: 0 auto;
     }
 
+    .container.responsive {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0 auto;
+        min-width: 320px; 
+    }
+
+    
+        
 
     /* --------------------Хедер----------------------- */
     header {
@@ -39,6 +47,16 @@ body {
 
     header .container {
         display: flex;
+        min-height: 70px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
 
     .list,
@@ -61,7 +79,6 @@ body {
     
     .tm {
         display: flex;
-        /* gap: 40px; */
         margin-left: auto;
 
     }
@@ -99,6 +116,40 @@ body {
         margin-right: 77px;
     }
 
+    /* @media screen and (max-width: 480px) {
+        .logo {
+            text-decoration: none;
+
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 1.33;
+
+            letter-spacing: 0.03em;
+
+            color: #2E2F42;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            margin-right: 250px; 
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .logo {
+            text-decoration: none;
+
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 1.33;
+
+            letter-spacing: 0.03em;
+
+            color: #2E2F42;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            margin-right: 123px;
+        }
+    } */
+
     .linkstudio,
     .linkport,
     .linkcont {
@@ -132,7 +183,7 @@ body {
         color: #4D5AE5;
         transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-
+    
     .empha {
         color: #4D5AE5
     }
@@ -180,10 +231,16 @@ body {
         display: flex;
         
     }
+    
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+        .menu {
+        display: none;
+        }
+    }
     /* -----------------Головний екран----------------- */
 
     .top {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people.jpg), url(../images/people-office.jpg), url(../images/people-office@2x.jpg);
         background-color: #2E2F42;
         background-position: center;
         background-size: cover;
@@ -193,7 +250,35 @@ body {
         margin-left: auto;
         margin-right: auto;
     }
+
+    @media screen and (max-width: 480px) {
+        .top {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-mob.jpg);
+            background-color: #2E2F42;
+            background-position: center;
+            background-size: cover;
+            padding-top: 112px;
+            padding-bottom: 112px;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
     
+    @media screen and (min-width: 480px) and (max-width: 768px) {
+        .top {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-tab.jpg);
+            background-color: #2E2F42;
+            background-position: center;
+            background-size: cover;
+            padding-top: 112px;
+            padding-bottom: 112px;
+            max-width: 768px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
     .toph {
         flex-direction: column;
         display: flex;
@@ -208,6 +293,36 @@ body {
         color: #FFFFFF;
 
         margin-bottom: 64px;
+    }
+
+    @media screen and (max-width: 480px) {
+        .toph {
+            flex-direction: column;
+            display: flex;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.11;
+
+            text-align: center;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            color: #FFFFFF;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .toph {
+            flex-direction: column;
+            display: flex;
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 1.07;
+           
+            text-align: center;
+            letter-spacing: 0.02em;
+
+            color: #FFFFFF;
+        }
     }
 
     .top button {
@@ -251,6 +366,52 @@ body {
         box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.05);
         transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    @media screen and (max-width: 480px) {
+        .top button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 72px; 
+        cursor: pointer;
+        padding: 16px 32px;
+        gap: 10px;
+
+        background-color: #4D5AE5;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+
+        letter-spacing: 0.04em;
+
+        color: #FFFFFF;
+    }
+
+    .top button:hover, 
+    .top button:focus {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        margin-top: 72px;
+        background-color: #404BBF;
+        box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        border-radius: 4px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+
+        letter-spacing: 0.04em;
+
+        color: #FFFFFF;
+        box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.05);
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+
+
 /* -----------------Модальне вікно--------------------------- */
     .backdrop {
         position: fixed;
@@ -341,10 +502,7 @@ body {
         color: #2E2F42;
         margin-bottom: 14px;
     }
-    /* .anketa {
-        position: relative;
-    } */
-
+   
     .anklab {
         font-family: 'Roboto';
         font-style: normal;
@@ -508,6 +666,7 @@ body {
     }
 
     /* ----------------------Розділ сервісу-------------------- */
+    
 
 
     .services {
@@ -519,7 +678,6 @@ body {
         margin: 0;
         padding: 0;
     }
-
     .servikon {
         display: flex;
         width: 264px;
@@ -528,6 +686,11 @@ body {
         border-radius: 4px;
         align-items: center;
         justify-content: center;
+    }
+    @media screen and (max-width: 1199px) {
+        .servikon {
+            display: none;
+        }
     }
 
     .iconserv:hover,
@@ -567,8 +730,70 @@ body {
 
         color: #434455;
     }
-    
+
+    @media screen and (max-width: 480px) {
+        .services {
+            padding-top: 96px;
+            padding-bottom: 96px;
+        }
+        .serv {
+            display: list-item;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            }
+        
+        .serv .servli+.servli {
+            margin-top: 72px;
+        }
+
+        .services .servh {
+            margin: 0;
+            width: 396px;
+            height: 40px;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.11;
+            text-align: center;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+
+            color: #2E2F42;
+
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+
+        .services .servp {
+            margin-top: 8px;
+            width: 396px;
+            height: 48px;
+
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.5;
+            
+            letter-spacing: 0.02em;
+
+            color: #434455;
+
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
+        }
+    }
+
+
     /* ------------------Що ми робимо---------------------- */
+    @media screen and (max-width: 1199px) {
+        .rect {
+            display: none;
+        }
+    }
     .rect {
         padding-bottom: 120px;
     }
@@ -662,10 +887,7 @@ body {
     }
 
     .socli {
-        
-
-        margin-right: 24px;
-        
+        margin-right: 24px;        
     }
 
     .socli a {
@@ -698,6 +920,108 @@ body {
         letter-spacing: 0.02em;
 
         color: #434455;
+    }
+
+        /* ------------------------Команда-mobile type---------------- */
+
+    @media screen and (max-width: 480px) {
+        .team {
+            height: 2264px;
+            background-color: #F4F4FD;
+            padding: 96px 128px 82px 82px;
+        }
+
+        .team h2 {
+            margin: 0;
+            text-align: center;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.11;
+            
+            letter-spacing: 0.02em;
+
+            text-transform: capitalize;
+            color: #2E2F42;
+            margin-bottom: 72px;
+        }
+
+        .staff {
+            display: list-item;
+            padding: 0;
+            margin: 0;
+
+        }
+        .staff > .staffli {
+            background-color: #FFFFFF;
+            box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        }
+        .staff > .staffli+.staffli {
+            margin-top: 72px;
+        }
+
+        .name {
+            padding: 32px 14px;
+        }
+        .staff h3 {
+            margin: 0;
+            text-align: center;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.20;
+            letter-spacing: 0.02em;
+
+            color: #2E2F42;
+
+            margin-bottom: 8px;
+        }
+
+        .socstaff {
+            display: list-item;
+            margin: 0;
+            padding: 0;
+            margin-top: 12px;
+        }
+        .socul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .socli {
+            margin-right: 24px;
+        }
+
+        .socli a {
+            display: flex;
+            margin: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #4D5AE5;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+        }
+        .socli:last-child {
+            margin-right: 0px;
+        }
+
+        .socli a:hover,
+        .socli a:focus {
+            background-color: #404BBF;
+            transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+
+        .staff p {
+            margin: 0;
+            text-align: center;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.50;
+            letter-spacing: 0.02em;
+
+            color: #434455;
+        }
     }
 
 
@@ -764,6 +1088,72 @@ body {
         transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    @media screen and (max-width: 480px) {
+        .cust {
+            /* height: 442px; */
+            background-color: #FFFFFF;
+            /* padding-top: 120px;
+            padding-bottom: 120px; */
+        }
+    
+        .cust h2 {
+            margin-top: 96px;
+            margin-bottom: 72px;
+            /* text-align: center; */
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.11;
+            
+            letter-spacing: 0.02em;
+
+            text-transform: capitalize;
+            color: #2E2F42;
+
+        }
+
+        .custul {
+            display: list-item;
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        .custul .custli+.custli {
+            margin-left: 16px;
+        }
+        
+        .custa {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            width: 168px;
+            height: 88px;     
+            border: 1px solid #8E8F99;
+            border-radius: 4px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .custa:hover,
+        .custa:focus {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            width: 168px;
+            height: 88px;     
+            border: 1px solid #4D5AE5;   
+            transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);     
+        }
+        .custsvg {
+            fill: #8E8F99;
+        }
+
+        .custsvg:hover,
+        .custsvg:focus {
+            fill: #4D5AE5;
+            transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
 
     /* ------------------------Футтер---------------------- */
 
